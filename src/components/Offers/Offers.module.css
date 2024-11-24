@@ -1,0 +1,100 @@
+.offers{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 100px auto;
+}
+.box{
+    padding: 50px;
+    border-radius: 0.5rem;
+    background-color: rgb(249, 242, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.discount_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: rgb(246, 217, 221);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.offerImg{
+    width: 100%;
+    max-width: 400px;
+    margin-top: auto;
+    object-fit: contain;
+    background-position: center;
+}
+.offerName{
+    font-size: 36px;
+    font-weight: 500;
+    color: rgb(246, 176, 186);
+    margin-bottom: 30px;
+}
+.offerDescription{
+    color: rgb(89, 89, 89);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+.price{
+    margin-bottom: 20px;
+}
+.oldPrice{
+    margin-right: 20px;
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(164, 164, 164);
+    vertical-align: middle;
+}
+.newPrice{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(246, 176, 186);
+    vertical-align: middle;
+}
+@media all and (max-width:768px){
+    .offers{
+        grid-template-columns: repeat(1, 1fr);
+        margin: 50px auto;
+    }
+    .offerImg{
+        width: 100%;
+        max-width: 400px;
+        aspect-ratio: 1/0.8;
+    }
+    .discount_div{
+        font-size: 14px;
+        right: 10px;
+        top: 10px;
+    }
+    .offerName{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .offerDescription{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 20px;
+    }
+    .oldPrice{
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .newPrice{
+        font-size: 18px;
+    }
+}

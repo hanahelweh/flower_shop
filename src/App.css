@@ -1,0 +1,265 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-family: "Inter Tight", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  background-color: #fdfdfd;
+  padding-right: 60px !important;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  box-sizing: border-box;
+  position: relative;
+}
+a{
+  text-decoration: none;
+}
+.flexi{
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 20px;
+}
+
+/* start for TextAnimations Components */
+
+.home_animatedText{
+  min-height: 180px;
+  font-size: 40px;
+  margin: 100px auto;
+  max-width: 1000px
+}
+.animatedText{
+  text-align: center;
+  padding: 20px;
+  font-family: "Playwrite GB S", cursive;
+  z-index: 10;
+  word-break: break-word;
+}
+.flowerBox{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  font-size: 150px;
+  color: rgb(249, 242, 243);
+}
+.home_animatedText .flower{
+  color: rgb(246, 217, 221);
+  font-size: 80px;
+  margin-left: 10px;
+  vertical-align: middle;
+  display: inline-block;
+}
+/* end for TextAnimation Components */
+
+/* start regular button */
+.button{
+  background-color: black;
+  padding: 15px 25px;
+  border-radius: 2rem;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 17px;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+}
+.button.sm{
+  padding: 5px 15px;
+  font-size: 12px;
+}
+.button:hover{
+  border-bottom-right-radius: 0.5rem;
+}
+/* end regular button */
+
+/* start display grid */
+.grid{
+  display: grid;
+}
+.grid.col2{
+  grid-template-columns: repeat(2,1fr);
+}
+.grid.gap10{
+  gap: 10px;
+}
+/* end display grid */
+
+/* start circular button with hover effect */
+.btn div{
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: alls 1s ease;
+  cursor: pointer;
+}
+.btn div span{
+  margin-top: 5px;
+}
+.btn div::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.2);
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.btn div:hover::before{
+  transform: scale(1);
+  opacity: 1;
+}
+.btn.dark div{
+  background-color: black;
+  color: white;
+}
+.btn.light div{
+  background-color: white;
+  color: black;
+}
+.btn.dark div, .btn.light div{
+  width: 60px;
+  font-size: 24px;
+}
+.btn.light.sm div, .btn.dark.sm div{
+  width: 40px;
+  font-size: 20px;
+}
+.btn.dark div{
+  border: 1px solid white;
+}
+.btn.light div{
+  border: 1px solid black;
+}
+.btn.light div::before{
+  background-color: black;
+}
+.btn.light div:hover{
+  color: white;
+}
+.btn.dark div::before{
+  background-color: white;
+}
+.btn.dark div:hover{
+  color: black;
+}
+/* end circular button with hover effect */
+
+/* start sub pages header ui */
+.subPageHeader_container{
+  background: rgb(249, 242, 243);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: "Playwrite GB S", cursive;
+  font-weight: 500;
+  font-size: 22px !important;
+  padding-top: 80px;
+  min-height: 250px;
+  font-size: 32px !important;
+}
+.subPageHeader_container::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-image: linear-gradient(0deg, white 0%, transparent 60%);
+}
+.subPageHeader{
+  text-align: center;
+  max-width: 800px;
+  font-size: 40px;
+}
+/* end sub pages header ui */
+
+/* start input */
+.input{
+  border: none;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  line-height: 60px;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+}
+.input::placeholder{
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.input:focus, .input:hover{
+  border-bottom: 1px solid black;
+}
+/* end input */
+.quantity{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.quantity button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.quantity button:disabled{
+  color: rgb(233, 233, 233);
+}
+@media all and (max-width:768px){
+  .btn.light div, .btn.dark div{
+    width: 40px;
+  }
+  body{
+    padding-right: 0px;
+    padding-top: 45px;
+  }
+  .button{
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+  .animatedText{
+    font-size: 30px;
+  }
+  .home_animatedText{
+    margin: 50px auto;
+    min-height: 140px;
+  }
+  .animatedText_container{
+    min-height: 140px;
+  }
+  .flower{
+    font-size: 50px !important;
+  }
+  .animated.blueFlower{
+    font-size: 40px;
+    margin-left: 5px;
+  }
+  .input{
+    line-height: 40px;
+  }
+  .input::placeholder{
+    font-size: 15px;
+  }
+}
+@media all and (max-width:486px){
+  .input::placeholder{
+    font-size: 13px;
+  }
+}

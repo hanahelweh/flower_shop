@@ -1,0 +1,26 @@
+.title{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Playwrite GB S", cursive;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.button{
+    margin-top: 40px;
+    width: 100%;
+}
+p{
+    text-decoration: underline;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+@media all and (max-width:768px){
+    .title{
+        font-size: 14px;
+    }
+    .button{
+        margin-top: 20px;
+    }
+}
