@@ -4,6 +4,7 @@ import { useGSAP } from '@gsap/react';
 import styles from './Products.module.css'
 import { PiHandbagThin } from "react-icons/pi";
 import {productProps} from './Products'
+import { Link } from 'react-router-dom';
 
 function Product({product}:{product:productProps}) {
     const productRef = useRef<HTMLDivElement>(null);
@@ -38,20 +39,22 @@ function Product({product}:{product:productProps}) {
         );
     });    
     return (
+            <Link to="/products/details">
         <div ref={productRef} className={`product-section ${styles.products_container_lazyLoading}`}>
-            <div className={`${styles.products_container_hover} btn light sm`}>
-                <div><span><PiHandbagThin/></span></div>
-            </div>
-            <img ref={imageRef} src={product.image} alt={product.name} />
-            <div className={styles.product_info}>
-                <div className={styles.product_name}>
-                    {product.name}
-                    </div>
-                <div className={styles.product_price}>
-                    {product.price}$
+                <div className={`${styles.products_container_hover} btn light sm`}>
+                    <div><span><PiHandbagThin/></span></div>
                 </div>
-            </div>
+                <img ref={imageRef} src={product.image} alt={product.name} />
+                <div className={styles.product_info}>
+                    <div className={styles.product_name}>
+                        {product.name}
+                        </div>
+                    <div className={styles.product_price}>
+                        {product.price}$
+                    </div>
+                </div>
         </div>
+            </Link>
     )
 }
 
