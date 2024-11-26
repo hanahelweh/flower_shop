@@ -221,6 +221,9 @@
 
 
 @media all and (max-width:768px){
+    .sideNav_content{
+        max-width: none;
+    }
     .sideNav{
         bottom: auto;
         left: 0;

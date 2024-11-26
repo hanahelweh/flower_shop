@@ -23,7 +23,6 @@
 }
 .question{
     font-size: 22px;
-    /* font-weight: 300; */
     margin-top: 20px;
 }
 .answer{
@@ -39,5 +38,28 @@
         transform: translateY(20px);
     }to{
         transform: translateY(0px);
+    }
+}
+@media all and (max-width:486px){
+    .container{
+        margin: 50px auto;
+    }
+    .faq{
+        gap: 15px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .number{
+        font-size: 20px;
+    }
+    .question{
+        font-size: 16px;
+        margin-top: 4px;
+    }
+    .answer{
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 26px;
     }
 }

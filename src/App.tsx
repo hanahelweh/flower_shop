@@ -7,6 +7,11 @@ import ItemDetails from './components/ItemDetails/ItemDetails'
 import Checkout from './components/Checkout/Checkout'
 import NavFooterControl from './components/NavFooterControl'
 import { useSmoothScroll } from './components/hooks/useSmoothScroll'
+
+
+// import { useEffect } from 'react'
+// import axios from 'axios';
+
 function App() {
   useSmoothScroll({
     lerp: 0.1,
@@ -15,6 +20,16 @@ function App() {
     smoothWheel: true,
     smoothTouch: false,
   });
+
+  // useEffect(()=>{
+  //   axios.get('http://localhost:3000/api/getAll')
+  //   .then(response => {
+  //       console.log(response.data);
+  //   })
+  //   .catch(error => {
+  //       console.error('Error fetching data:', error);
+  //   });
+  // },[])
   return (
     <BrowserRouter>
       <Routes>

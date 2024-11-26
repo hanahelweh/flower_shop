@@ -1,8 +1,8 @@
 import styles from './SideNav.module.css';
 import { PiHandbagThin } from "react-icons/pi";
 import { CiUser } from "react-icons/ci";
-import { useState } from 'react';
-import {Link} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import {Link, useLocation} from 'react-router-dom';
 import React from 'react'
 import Menu from './Menu';
 import Cart from './Cart';
@@ -10,6 +10,7 @@ import Modal from '../Modal/Modal';
 import Auth from '../Auth/Auth';
 type OpenPanel = 'menu' | 'cart' | null;
 function SideNav() {
+    const location = useLocation();
     const [isOpen,setIsOpen]=useState<OpenPanel>(null);
     const togglePanel = (panel: OpenPanel) => {
         if (isOpen === panel) {
@@ -18,6 +19,9 @@ function SideNav() {
             setIsOpen(panel);
         }
     };
+    useEffect(() => {
+        setIsOpen(null);
+    }, [location]);
     return (
         <>
         <div className={styles.sideNav}>
@@ -36,9 +40,9 @@ function SideNav() {
                 }
             </div>
             <div>
-                <div onClick={()=> togglePanel('cart')}>
+                <span onClick={()=> togglePanel('cart')}>
                     <PiHandbagThin className={styles.sideNav_icon}/>
-                </div>
+                </span>
                 <Modal>
                     <Modal.Open windowName='auth'>
                         <CiUser className={styles.sideNav_icon}/>

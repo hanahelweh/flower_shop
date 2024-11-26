@@ -41,6 +41,7 @@
     aspect-ratio: 1/1.1;
     border-radius: inherit;
     background-position: center;
+    transition: transform 0.5s ease-in-out;
 }
 .products_container_lazyLoading:hover img{
     transform: scale(1.1);
@@ -82,7 +83,7 @@
         margin: 50px auto;
     }
     .products{
-        padding: 20px 0;
+        padding: 20px;
     }
     .products_container {
         grid-template-columns: repeat(2, 1fr);

@@ -228,7 +228,7 @@ a{
     width: 40px;
   }
   body{
-    padding-right: 0px;
+    padding-right: 0px !important;
     padding-top: 45px;
   }
   .button{
@@ -262,5 +262,8 @@ a{
 @media all and (max-width:486px){
   .input::placeholder{
     font-size: 13px;
+  }
+  .animatedText{
+    font-size: 25px;
   }
 }

@@ -1,7 +1,6 @@
 import React, { cloneElement, createContext, ReactElement, useContext, useState } from 'react'
 import { createPortal } from 'react-dom';
 import styles from './Modal.module.css'
-import { HiOutlineArrowSmallUp } from 'react-icons/hi2';
 import { IoMdClose } from "react-icons/io";
 type ModalContextType ={
   openName:string | undefined,
