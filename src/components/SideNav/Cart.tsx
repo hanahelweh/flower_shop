@@ -35,8 +35,10 @@ export default function Cart() {
                         <div className={styles.itemName}>{item.name}</div>
                         <div className={styles.itemPrice}>${item.price}</div>
                         <div className={styles.actions}>
-                            <div className={styles.cartQuantity}>
-                                <Quantity />
+                            <div>
+                                <div className={styles.cartQuantity}>
+                                    <Quantity />
+                                </div>
                             </div>
                             <div className={`${styles.delete} btn light sm`}>
                                 <div><AiFillDelete /></div>
