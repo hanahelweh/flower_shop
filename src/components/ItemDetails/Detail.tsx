@@ -16,15 +16,8 @@ export default function Detail({detail,product,current,setCurrent}:DetailProps) 
         >
             <div className={styles.title}>{detail}</div>
             {current !== null && current === detail && (
-            <div className={styles.productText}>
-                {detail === 'dimensions' ? (
-                <>
-                    <div>width: {product.dimensions.width} CM</div>
-                    <div>height: {product.dimensions.height} CM</div>
-                </>
-                ) : (
-                product[detail]
-                )}
+            <div className={styles.productText}>  
+              {product[detail]}
             </div>
             )}
         </div>

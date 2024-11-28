@@ -29,7 +29,7 @@
     font-family: "Playwrite GB S", cursive;
     font-weight: 600;
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom:10px;
 }
 .title{
     color: rgb(89,89,89);
@@ -75,6 +75,51 @@
     font-size: 22px;
     color: green;
 }
+.flexContainer{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+.addons{
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+.addons p{
+    color: rgb(89,89,89);
+    margin: 4px 0 0 0;
+    font-weight: 500;
+}
+.addons img{
+    border-radius: 0.25rem;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    width: 100px;
+    background-color: rgb(239, 239, 239);
+}
+.size{
+    border: 1px solid black;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+    text-transform: lowercase;
+}
+.size span:nth-child(2){
+    font-size: 12px;
+}
+.size.selected{
+    background-color: black;
+    color: white;
+}
+.marginTop20{
+    margin-top: 20px;
+}
+.ready span{
+    vertical-align: middle;
+}
+
 @media all and (max-width:1024px){
     .container{
         grid-template-columns: 1fr;

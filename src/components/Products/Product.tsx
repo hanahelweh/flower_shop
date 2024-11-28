@@ -39,8 +39,8 @@ function Product({product}:{product:productProps}) {
         );
     });    
     return (
-            <Link to="/products/details">
-        <div ref={productRef} className={`product-section ${styles.products_container_lazyLoading}`}>
+        <Link to="/products/details">
+            <div ref={productRef} className={`product-section ${styles.products_container_lazyLoading}`}>
                 <div className={`${styles.products_container_hover} btn light sm`}>
                     <div><span><PiHandbagThin/></span></div>
                 </div>
@@ -53,8 +53,8 @@ function Product({product}:{product:productProps}) {
                         {product.price}$
                     </div>
                 </div>
-        </div>
-            </Link>
+            </div>
+        </Link>
     )
 }
 
